@@ -4,38 +4,54 @@ TikTak is a simple TikTok-like app for browsing short videos, liking them, and g
 
 ## Features
 
-- Watch videos from different categories (owls, cats, dogs)
+- Watch videos from different categories
 - Like videos and track likes per category
-- Personalized video recommendations based on your likes
+- Personalized video recommendations: the more you like a category, the more often you see it
 - Go to the next video using the down arrow key or mouse scroll
+- Login/register to save your preferences
+- Only registered users can like videos
 
-## Demo Video
+## Demo
 
-[<video src="./public/videos/Desktop.mp4" controls width="400"></video>](https://github.com/user-attachments/assets/7d131590-5407-493d-9fe4-762b00ae0c3a)
+
 
 ## Getting Started
 
-1. Clone the repository:
+1. **Clone the repository:**
    ```
    git clone https://github.com/DarrosHere/tiktak.git
    cd tiktak
    ```
-2. Install dependencies:
+
+2. **Install dependencies:**
    ```
    npm install
    ```
-3. Start the app:
+
+3. **Configure environment variables:**
+
+   Create a `.env` file in the root directory and add the following (edit values as needed):
+
+   ```
+   DATABASE_URL=postgres://youruser:yourpassword@localhost:5432/yourdb
+   JWT_SECRET=your_jwt_secret
+   ```
+
+4. **Set up the database:**
+   - Make sure PostgreSQL is running.
+   - Create a database and run the provided SQL migrations (if available).
+
+5. **Start the app:**
    ```
    npm run dev
    ```
 
-
 ## Technologies
 
 - React
-- JavaScript
-- CSS (Tailwind or custom styles)
-
+- Node.js + Express
+- PostgreSQL
+- CSS (Tailwind)
 
 ---
 
